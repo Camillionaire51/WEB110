@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 20px;
+  align-items: center;
+}
+
+input[type=text], select, textarea, input[type=date]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=submit]{
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  grid-column: 2/3;
+  width: 100%;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+    
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+        <option value="">--Select Country--</option>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+       
+        <label>Are you a morning person?</label>
+        <div class="radio-group" required>
+          <label><input type="radio" name="morning" value="yes">Yes</label>
+          <label><input type="radio" name="morning" value="no">No</label>
+          </div>
+
+    <label for="message">Is there any specific you would like us to know so we can help you better?</label>
+    <textarea id="message" name="message" placeholder="Anything specific to mention?" rows="4"></textarea>
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

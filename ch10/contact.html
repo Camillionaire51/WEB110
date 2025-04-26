@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Camille Parker 04/21/25-->
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the page content -->
+    <div class="container">
+        <!-- Header section with company logo and title -->
+        <header>
+            <!-- Replace with your logo image -->
+            <img src="logo.webp" alt="JCCC Logo">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Please fill out the form below.</p>
+        </header>
+
+        <!-- Main content area with the contact form -->
+        <main>
+            <form action="https://webdevbasics.net/scripts/demo.php" method="POST">
+                <!-- First Name Input Field -->
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <!-- Last Name Input Field -->
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <!-- Email Input Field -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone Number Input Field (Optional) -->
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                </div>
+
+                <!-- Textarea for 'Learn More' Section -->
+                <div class="form-group">
+                    <label for="learnMore">What would you like to know more about?</label>
+                    <textarea id="learnMore" name="learnMore"></textarea>
+                </div>
+
+                <!-- Radio Buttons for Contact Preference -->
+        
+                    <label>How would you prefer we contact you?</label>
+                    <div class="contact-options">
+                        <!-- Email Contact Option -->
+                        <input type="radio" id="contactEmail" name="contactPreference" value="email">
+                        <label for="contactEmail">Email</label>
+
+                        <!-- Phone Contact Option -->
+                        <input type="radio" id="contactPhone" name="contactPreference" value="phone">
+                        <label for="contactPhone">Phone</label>
+
+                        <!-- No Preference Option -->
+                        <input type="radio" id="noPreference" name="contactPreference" value="no_preference">
+                        <label for="noPreference">No Preference</label>
+                    </div>
+                
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer with copyright information -->
+        <footer>
+            <p>&copy; 2025 Camille Parker. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
