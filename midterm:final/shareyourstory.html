@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Camille Parker 5/13/25-->
+    <!--Form Page-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Share Your Story</title>
+        <link href="styles2.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.google.com/specimen/Karla?preview.text=A%20Love%20Letter%20to%20New%20York" rel="stylesheet">
+    </head>
+
+    <!--Form Styles-->
+    <style>
+
+        /* Main Form Styles */
+
+        label{
+            color:#fee12b;
+            font-size: 1.5rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea{
+            width: 30%;
+            height: 2.5rem;
+            border-radius: 8px;
+        }
+
+        textarea{
+            width: 50%;
+            height: 5rem;
+        }
+
+        /* Class Styles */
+
+        .form-group{
+            display: grid;
+            padding-top: 2rem;
+        }
+
+        .form-group label {
+            padding-bottom: .5rem;
+        }
+
+        .file-upload{
+            display: grid;
+            gap: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .newsletter-label{
+            padding-bottom: .5rem;
+        }
+
+        .newsletter-options{
+            padding-bottom: 2rem;
+            accent-color: #fee12b;
+        }
+
+        .newsletter-options label{
+            color: white;
+            padding-left: .5rem;
+        }
+
+        .bucket-list{
+            display: grid;
+            grid-template-columns: 5rem, minmax(250px,2fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            margin-top: 1rem;
+        }
+
+        .bucket-list label{
+            color: white;
+        }
+
+        .bucket-list input[type="checkbox"]{
+            margin-right: 10px;
+            accent-color: #fee12b;
+            width:1rem;
+        }
+
+        .borough label{
+        padding-right: .5rem;
+        }
+        
+        /* Button Styles */
+
+        button[type="submit"]{
+            background-color: #242526;
+            color: #ffe12b;
+            font-family: Karla, sans-serif;
+            font-size: 1rem;
+            border: #ffe12b solid 2px;
+            border-radius: 8px;
+            padding: 1rem;
+            justify-items: left;
+            max-width:150px;
+        }
+
+        button[type="submit"]:hover{
+            background-color: #ffe12b;
+            color: #242526;
+        }
+
+        button[type="reset"]{
+            background-color: #242526;
+            color: #ffe12b;
+            font-family: Karla, sans-serif;
+            font-size: 1rem;
+            border: #ffe12b solid 2px;
+            border-radius: 8px;
+            padding: 1rem;
+            justify-items: left;
+            max-width:150px;
+        }
+
+        button[type="reset"]:hover{
+            background-color: #ffe12b;
+            color: #242526;
+        }
+
+    </style>
+
+    <body>
+
+        <header>
+            <h1>Share Your Story</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">The Letter</a></li>
+                <li><a href="iconicnyc.html">Iconic NYC</a></li>
+                <li><a href="afterdark.html">After Dark</a></li>
+                <li><a href="scenesfromthecity.html">Scenes From the City</a></li>
+                <li><a href="shareyourstory.html">Share Your Story</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="intro">
+                <p>Every New Yorker has a story. Whether you're a lifelong resident or a visitor who fell in love with the city in a single weekend, your memories shape this ever-changing place. Share your New York moments with us!</p>
+            </div>
+
+            <form action="https://webdevbasics.net/scripts/demo.php" method="POST">
+
+                <!--First and Last Name Input-->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="First and Last Name" required>
+                </div> 
+
+                <!--Email Input-->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <!--Date Input-->
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <!--Favorite Memory Input-->
+                <div class="form-group">
+                    <label for="favoritememory">Your favorite New York memory:</label>
+                    <textarea id="favoritememory" name="favoritememory" placeholder="Describe a moment that made you fall in love with New York."></textarea>
+                </div>
+
+                <!--File Input-->
+                <div class="file-upload">
+                    <label for="file-upload">Upload a photo or video you'd like to share!</label>
+                    <input type="file" id="file-upload" name="file-upload">
+                </div>
+
+                <!--New York Newsletter Input-->
+                <div class="newsletter-label">
+                    <label>Would you like to recieve our monthly newsletter about New York City?</label>
+                </div>
+                <div class="newsletter-options">
+
+                    <!--Yes Option-->
+                    <div>
+                    <input type="radio" id="yes" name="recieve-newsletter">
+                    <label for="yes">Yes</label>
+                    </div>
+
+                    <!--No Option-->
+                    <div>
+                    <input type="radio" id="no" name="recieve-newsletter">
+                    <label for="no">No</label>
+                    </div>
+                </div>
+
+                <!--NYC Bucket List Input-->
+                <label>Check items off of your New York bucket list:</label>
+                <div class="bucket-list">
+                    
+                    <div>
+                    <input type="checkbox" id="rodeferry" name="bucketlist-item">
+                    <label for="rodeferry">Ride the Staten Island Ferry</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="visitedconey" name="bucketlist-item">
+                    <label for="visitedconey">Visit Coney Island</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="visitedmuseum" name="bucketlist-item">
+                    <label for="visitedmuseum">Visit a major NYC museum</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="walkcentralpark" name="bucketlist-item">
+                    <label for="walkcentralpark">Walk through Central Park</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="walkbrooklynbridge" name="bucketlist-item">
+                    <label for="walkbrooklynbridge">Walk across the Brooklyn Bridge</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="viewcityscape" name="bucketlist-item">
+                    <label for="viewcityscape">Catch a rooftop city view</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="broadwayshow" name="bucketlist-item">
+                    <label for="broadwayshow">Catch a Broadway show</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="taxiride" name="bucketlist-item">
+                    <label for="taxiride">Ride in a taxi</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="streetperformer" name="bucketlist-item">
+                    <label for="streetperformer">Watch a street performer</label>
+                    </div>
+
+                    <div>
+                    <input type="checkbox" id="yankeegame" name="bucketlist-item">
+                    <label for="yankeegame">Go to a Yankees or Mets game</label>
+                    </div>
+                </div>
+
+                <!--Select Favorite Borough Input-->
+                <div class="borough">
+                    <label for="borough">Choose your favorite borough:</label>
+                    <select id="borough" name="favorite-borough">
+                        <option value="manhattan">Manhattan</option>
+                        <option value="brooklyn">Brooklyn</option>
+                        <option value="queens">Queens</option>
+                        <option value="bronx">The Bronx</option>
+                        <option value="staten-island">Staten Island</option>
+                    </select>
+                </div>
+
+                <!--Submit Button-->
+                <div class="form-group">
+                    <button type="submit">Send My Story</button>
+                </div>
+
+                <!--Reset Button-->
+                <div class="form-group">
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+
+        </main>
+
+        <footer>
+            <p>If the city keeps you up at night too, send a note: <a href="mailto:camillepaigeparker@gmail.com" target="_blank">camillepaigeparker@gmail.com</a></p>
+            <p>Designed by Camille Parker &copy; 2025</p>
+        </footer>
+    </body>
+</html>
